@@ -103,7 +103,7 @@ func deployTx(pub string, a *account.Account) {
 	if err != nil {
 		panic(err)
 	}
-
+/*
 	for {
 
 		resp, err := a.AddDeployAccountTransaction(context.Background(), rpc.BroadcastDeployAccountTxn{DeployAccountTxn: tx})
@@ -116,7 +116,7 @@ func deployTx(pub string, a *account.Account) {
 		time.Sleep(11 * time.Second)
 
 	}
-
+*/
 }
 
 func invokeTx(a *account.Account) {
