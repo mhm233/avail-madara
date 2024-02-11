@@ -109,11 +109,11 @@ func deployTx(pub string, a *account.Account) {
 		resp, err := a.AddDeployAccountTransaction(context.Background(), rpc.BroadcastDeployAccountTxn{DeployAccountTxn: tx})
 		if err != nil {
 			fmt.Println(err)
-			time.Sleep(41 * time.Second)
+			time.Sleep(21 * time.Second)
 			continue
 		}
 		fmt.Println("deployd: ", resp.ContractAddress)
-		time.Sleep(21 * time.Second)
+		time.Sleep(11 * time.Second)
 
 	}
 
@@ -165,12 +165,12 @@ func invokeTx(a *account.Account) {
 		rsp, err := a.AddInvokeTransaction(context.Background(), InvokeTx)
 		if err != nil {
 			fmt.Println(err)
-			time.Sleep(4 * time.Second)
+			time.Sleep(20 * time.Second)
 			continue
 		}
 
 		fmt.Println("tx: ", rsp.TransactionHash, " nonce: ", nonce)
-		time.Sleep(2 * time.Second)
+		time.Sleep(10 * time.Second)
 	}
 }
 
